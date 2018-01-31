@@ -8,7 +8,7 @@ class Board extends Component {
     curCount: 0,
     highCount: 0,
     guessed: [],
-    cards: cardProps,
+    cards: cardProps.map((a) => [Math.random(),a]).sort((a,b) => a[0]-b[0]).map((a) => a[1]),
     correct: null
   };
 
@@ -27,6 +27,8 @@ class Board extends Component {
         if(values.curCount > values.highCount)
             values.highCount = values.curCount;
     }
+
+      values.cards = values.cards.map((a) => [Math.random(),a]).sort((a,b) => a[0]-b[0]).map((a) => a[1]);
 
       this.setState({...values});
   }
