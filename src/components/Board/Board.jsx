@@ -2,6 +2,28 @@ import React, { Component } from "react";
 import Card from '../Card';
 import cardProps from '../../cardProps.json';
 
+const counterStyle ={
+    background: "url(http://apod.nasa.gov/apod/image/0603/coma_misti.jpg) -80px -80px",
+    color: "red",
+    webkitTextFillColor: "transparent",
+    webkitBackgroundClip: "text",
+    fontWeight: "bold",
+    fontSize: "50px",
+    fontFamily: "arial, helvetica",
+    width: "600px",
+    marginTop: "0px",
+    marginBottom: "0px",
+    marginLeft: "auto",
+    marginRight: "auto",
+    textAlign: "center",
+    webkitTextStroke: "0.5px red"
+}
+
+const directionStyle = {
+    color: "white",
+    fontSize: "20px"
+}
+
 class Board extends Component {
   // Setting the component's initial state
   state = {
@@ -45,9 +67,12 @@ class Board extends Component {
   render() {
     return (
       <div>
+        <div className="row justify-content-center" style={directionStyle}>
+            Click on an image to start the counter. If you click on an image more than once, the game resets. Try to click all at least once before failing.
+        </div>
         <div className="row">
-            <h3>Current Count: {this.state.curCount}</h3>
-            <h3>Highest Count: {this.state.highCount}</h3>
+            <h3 style={counterStyle}>Current Count: {this.state.curCount}</h3>
+            <h3 style={counterStyle}>Highest Count: {this.state.highCount}</h3>
         </div>
         {this.generateAlert()}
         <div className="row justify-content-center">
