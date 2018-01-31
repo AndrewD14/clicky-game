@@ -1,0 +1,19 @@
+body {
+    background-color: #444;
+}
+
+#header {
+    background-color: indigo;
+    margin: 0;
+}
+
+#header h1 {
+    color: #4cad13;
+    font-family: "Great Vibes", cursive;
+    font-size: 165px;
+    line-height: 160px;
+    font-weight: normal;
+    text-align: center;
+    text-shadow: 0 1px 1px #fff;
+    margin: 0;
+}
