@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name":"Mario",
+        "imgURL":"https://static.giantbomb.com/uploads/scale_super/15/153607/2528930-mario.png"
+    },
+    {
+        "id": 2,
+        "name":"Link",
+        "imgURL":"https://static.giantbomb.com/uploads/original/15/153607/2528928-link.png"
+    },
+    {
+        "id": 3,
+        "name":"Luigi",
+        "imgURL":"https://static.giantbomb.com/uploads/original/6/62615/1185144-luigi__mario_party_8_.jpg"
+    },
+    {
+        "id": 4,
+        "name":"Kirby",
+        "imgURL":"https://static.giantbomb.com/uploads/original/14/149329/2311703-1000px_wikia_visualization_add_6.png"
+    },
+    {
+        "id": 5,
+        "name":"Samus Aran",
+        "imgURL":"https://vignette.wikia.nocookie.net/deathbattlefanon/images/4/41/Zero_Suit_Samus.png/revision/latest?cb=20150515030946"
+    },
+    {
+        "id": 6,
+        "name":"Zelda",
+        "imgURL":"https://vignette.wikia.nocookie.net/zelda/images/2/22/Zelda_%28SSB_3DS_%26_Wii_U%29.png/revision/latest?cb=20140610212822"
+    },
+    {
+        "id": 7,
+        "name":"Sephiroth",
+        "imgURL":"https://pre00.deviantart.net/37c7/th/pre/f/2013/335/5/4/sephiroth_1_transparent_png_by_darkmagician1211-d6wfp2n.png"
+    },
+    {
+        "id": 8,
+        "name":"Cloud Strife",
+        "imgURL":"https://vignette.wikia.nocookie.net/finalfantasy/images/1/1a/Cloud-FFVIIArt.png/revision/latest?cb=20110227161510"
+    },
+    {
+        "id": 9,
+        "name":"Pikachu",
+        "imgURL":"https://vignette.wikia.nocookie.net/deathbattlefanon/images/a/a0/Pikachu_SSB4.png/revision/latest?cb=20150408135017"
+    },
+    {
+        "id": 10,
+        "name":"Yoshi",
+        "imgURL":"http://www.pngmart.com/files/2/Yoshi-Transparent-Background.png"
+    },
+    {
+        "id": 11,
+        "name":"Tifa Lockhart",
+        "imgURL":"http://cdn.playbuzz.com/cdn/81d6ab92-e0f0-4650-86cf-58834dc328f6/4efbf850-2596-4510-81bb-9f9bf2c46e83.png"
+    },
+    {
+        "id": 12,
+        "name":"Ryu",
+        "imgURL":"https://i.pinimg.com/originals/7c/01/a4/7c01a43e112a1411d3996543ff761417.png"
+    }
+]
