@@ -1,24 +1,8 @@
 //imports the React module
 import React, { Component } from "react";
 
-//custom style for the various images in the buttons
-const imgStyle = {
-  maxWidth: "140px",
-  maxHeight: "160px",
-  margin: 0
-};
-
-//custom style for the buttons that are click
-const buttonStyle = {
-    background: "url(http://apod.nasa.gov/apod/image/0603/coma_misti.jpg) -80px -80px",
-    color: "green",
-    WebkitBackgroundClip: "button",
-    fontWeight: "bold",
-    fontFamily: "arial, helvetica",
-    fontSize: "20px",
-    width: "180px",
-    height: "200px"
-}
+//gets the css
+import CardStyle from './CardCss';
 
 //react component for each card that is for the game
 class Card extends Component {
@@ -40,10 +24,10 @@ class Card extends Component {
     //returns the html element for each button that is the card for the game
     return (
       <div className="col-2">
-        <button id={this.state.id} onClick={() => this.state.onClick(this.state.id)} style={buttonStyle}>
+        <button id={this.state.id} onClick={() => this.state.onClick(this.state.id)} style={CardStyle.buttonStyle}>
           <div className="row">
             <div className="col">
-              <img src={this.state.imgURL} style={imgStyle} alt=""/>
+              <img src={this.state.imgURL} style={CardStyle.imgStyle} alt=""/>
             </div>
           </div>
           <div className="row">

@@ -1,16 +1,12 @@
 //imports the React module
 import React from 'react';
 
-//style for the Alert messages
-const alertStyle = {
-    textAlign: "center",
-    fontSize: "20px",
-    fontWeight: "bold"
-}
+//import css
+import Alertcss from './AlertCss';
 
 //Alert react component
 const Alert = (props) => (
-    <div className={`alert alert-${props.type||"sucess"}`} style={alertStyle}>
+    <div className={`alert alert-${props.type||"sucess"}`} style={Alertcss.alertStyle}>
         {props.children}
     </div>
 )

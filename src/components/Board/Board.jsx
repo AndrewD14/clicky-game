@@ -8,29 +8,8 @@ import Alert from '../Alert';
 //imports the data for the JSON array
 import cardProps from '../../cardProps.json';
 
-//style for the text for the counters
-const counterStyle ={
-    background: "url(http://apod.nasa.gov/apod/image/0603/coma_misti.jpg) -80px -80px",
-    color: "red",
-    WebkitTextFillColor: "transparent",
-    WebkitBackgroundClip: "text",
-    fontWeight: "bold",
-    fontSize: "50px",
-    fontFamily: "arial, helvetica",
-    width: "600px",
-    marginTop: "0px",
-    marginBottom: "0px",
-    marginLeft: "auto",
-    marginRight: "auto",
-    textAlign: "center",
-    WebkitTextStroke: "0.5px red"
-}
-
-//style for the text for the directions
-const directionStyle = {
-    color: "white",
-    fontSize: "20px"
-}
+//gets the css styles
+import BoardStyles from './BoardCss';
 
 //board component that displays the game and results and directions
 class Board extends Component {
@@ -94,12 +73,12 @@ class Board extends Component {
     //returns the html elements to be rendor
     return (
       <div>
-        <div className="row justify-content-center" style={directionStyle}>
+        <div className="row justify-content-center" style={BoardStyles.directionStyle}>
             Click on an image to start the counter. If you click on an image more than once, the game resets. Try to click all at least once before failing.
         </div>
         <div className="row">
-            <h3 style={counterStyle}>Current Count: {this.state.curCount}</h3>
-            <h3 style={counterStyle}>Highest Count: {this.state.highCount}</h3>
+            <h3 style={BoardStyles.counterStyle}>Current Count: {this.state.curCount}</h3>
+            <h3 style={BoardStyles.counterStyle}>Highest Count: {this.state.highCount}</h3>
         </div>
         {this.generateAlert()}
         <div className={this.shouldShake()}>
