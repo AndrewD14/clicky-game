@@ -12,8 +12,8 @@ import cardProps from '../../cardProps.json';
 const counterStyle ={
     background: "url(http://apod.nasa.gov/apod/image/0603/coma_misti.jpg) -80px -80px",
     color: "red",
-    webkitTextFillColor: "transparent",
-    webkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    WebkitBackgroundClip: "text",
     fontWeight: "bold",
     fontSize: "50px",
     fontFamily: "arial, helvetica",
@@ -23,7 +23,7 @@ const counterStyle ={
     marginLeft: "auto",
     marginRight: "auto",
     textAlign: "center",
-    webkitTextStroke: "0.5px red"
+    WebkitTextStroke: "0.5px red"
 }
 
 //style for the text for the directions
@@ -80,6 +80,15 @@ class Board extends Component {
             return <Alert type="danger">You guessed incorrectly.</Alert>
   }
 
+  //check if the rows should shake
+  shouldShake = () => {
+      let value = "row justify-content-center";
+      if(this.state.correct === null || this.state.correct)
+        return value;
+      else
+        return value+" shake";
+  }
+
   //react function to call the ReactDOM rendor
   render() {
     //returns the html elements to be rendor
@@ -93,7 +102,7 @@ class Board extends Component {
             <h3 style={counterStyle}>Highest Count: {this.state.highCount}</h3>
         </div>
         {this.generateAlert()}
-        <div className="row justify-content-center">
+        <div className={this.shouldShake()}>
             {this.state.cards.map((card, i) => {
                 if(i % 3 === 0)
                     return <Card key={card.id} {...card} onClick={this.handleClick}/>;
@@ -101,7 +110,7 @@ class Board extends Component {
                     return null;
             })}
         </div>
-        <div className="row justify-content-center">
+        <div className={this.shouldShake()}>
             {this.state.cards.map((card, i) => {
                 if(i % 3 === 1)
                     return <Card key={card.id} {...card} onClick={this.handleClick}/>;
@@ -109,7 +118,7 @@ class Board extends Component {
                     return null;
             })}
         </div>
-        <div className="row justify-content-center">
+        <div className={this.shouldShake()}>
             {this.state.cards.map((card, i) => {
                 if(i % 3 === 2)
                     return <Card key={card.id} {...card} onClick={this.handleClick}/>;

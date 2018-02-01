@@ -12,7 +12,7 @@ const imgStyle = {
 const buttonStyle = {
     background: "url(http://apod.nasa.gov/apod/image/0603/coma_misti.jpg) -80px -80px",
     color: "green",
-    webkitBackgroundClip: "button",
+    WebkitBackgroundClip: "button",
     fontWeight: "bold",
     fontFamily: "arial, helvetica",
     fontSize: "20px",
@@ -40,7 +40,7 @@ class Card extends Component {
     //returns the html element for each button that is the card for the game
     return (
       <div className="col-2">
-        <button id={this.state.id} className="float-left" onClick={() => this.state.onClick(this.state.id)} style={buttonStyle}>
+        <button id={this.state.id} onClick={() => this.state.onClick(this.state.id)} style={buttonStyle}>
           <div className="row">
             <div className="col">
               <img src={this.state.imgURL} style={imgStyle} alt=""/>

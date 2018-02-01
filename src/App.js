@@ -6,7 +6,7 @@ import Board from './components/Board/Board';
 
 //react component that puts the main game together
 const App = () => (
-    <div class="container-fluid">
+    <div className="container-fluid">
       <Board />
     </div>
 )
